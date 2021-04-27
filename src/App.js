@@ -3,6 +3,7 @@ import './App.css'
 import Circle from "./components/Circle.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Victory from './components/Victory.jsx'
+import Containers from './components/Containers.jsx'
 
 
 class App extends React.Component {
@@ -153,7 +154,10 @@ class App extends React.Component {
                 </div>
 
                 <div className="flex grid-item-5">
-                  <div className="containerP1">
+                  <Containers>
+
+                  </Containers>
+                  {/* <div className="containerP1">
                     <div className="divchildP1">
                       <div >
                         <Circle circleColor={this.state.player1Tokens[0] ? "#4646e8" : "black"} />
@@ -165,9 +169,13 @@ class App extends React.Component {
                         <Circle circleColor={this.state.player1Tokens[3] ? "#4646e8" : "black"} />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  <Containers>
+                    
+                    </Containers>
+                    
 
-                  <div className="containerP2">
+                  {/* <div className="containerP2">
                     <div className="divchildP2">
                       <div >
                         <Circle circleColor={this.state.player2Tokens[0] ? "#c30c0c" : "black"} />
@@ -179,7 +187,7 @@ class App extends React.Component {
                         <Circle circleColor={this.state.player2Tokens[3] ? "#c30c0c" : "black"} />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="numeroDee">
 
