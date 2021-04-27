@@ -1,9 +1,8 @@
 import React from "react";
 import './App.css'
 import Circle from "./components/Circle.jsx"
-import Winner from "./assets/pic/winner.gif"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Victory from './components/Victory'
+import Victory from './components/Victory.jsx'
 
 
 class App extends React.Component {
@@ -113,16 +112,24 @@ class App extends React.Component {
   }
 
   renderVictory() {
+
+    // Ici on affiche qui a gagné (mais le code est répété) => création d'un nouveau 
+    // component (Vicotry.jsx) pour éviter les répétitions
+
     if (this.state.player1Tokens.indexOf(false) === -1) {
       return (<div className="winner" >
         <p className="pWins"> <span className="spanP1">Player 1</span> Wins !</p>
-        <div className="offset-3" style={{ background: `url(${Winner})`, height: `${500}px`, backgroundRepeat: "no-repeat" }} />
+        <div/>
+        <Victory></Victory>
       </div>)
     } else if (this.state.player2Tokens.indexOf(false) === -1) {
       return (<div className="winner" >
         <p className="pWins"> <span className="spanP2">Player 2</span> Wins !</p>
-        <div className="offset-3" style={{ background: `url(${Winner})`, height: `${500}px`, backgroundRepeat: "no-repeat" }} />
+        <div/>
+        <Victory></Victory>
       </div>)
+
+      // Fin de répétition du code x2
 
     } else {
       return (
@@ -211,7 +218,14 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>{this.renderVictory()}</div>
+      <div>
+        {this.renderVictory()}
+      
+      {/* <Victory onChange={this.state.renderVictory}></Victory> */}
+      
+      </div>
+
+
       )
   }
 

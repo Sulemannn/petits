@@ -1,12 +1,19 @@
 import React from 'react';
+import Winner from "../assets/pic/winner.gif"
+
 
 class Victory extends React.Component {
 
-    render () {
+    render() {
 
         return (
-            <div>
-                renderVictory={this.props.victory}
+            
+            <div 
+            className="offset-3" 
+            style={{ background: `url(${Winner})`, 
+            height: `${500}px`, 
+            backgroundRepeat: "no-repeat" }}>
+
             </div>
         )
 
